@@ -18,7 +18,8 @@ def upload():
         return 'No selected file'
     if file:
         print('File uploaded successfully')
-        return 'File uploaded successfully'
+        generateGraphs.generateGraphs()
+        return render_template('graphs.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
